@@ -8,7 +8,7 @@ def jsonParse(def json) {
 
 def repo = "anacondong/jenkins-course"
 
-def token = httpRequest authentication: 'bitbucket-user', contentType: 'APPLICATION_FORM', httpMode: 'POST', requestBody: 'grant_type=client_credentials', url: 'https://bitbucket.org/site/oauth2/access_token'
+def token = httpRequest authentication: 'bitbucket-user', contentType: 'APPLICATION_FORM', httpMode: 'POST', requestBody: 'grant_type=client_credentials', url: 'https://bitbucket.org/site/oauth2/access_token', code:'sPBnsA5Jy6akp68SSV'
 println(token.content)
 def accessToken = jsonParse(token.content).access_token
 println(accessToken)
